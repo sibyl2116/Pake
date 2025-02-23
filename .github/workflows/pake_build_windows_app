@@ -1,4 +1,4 @@
-name: Build Single Popular App
+name: Build Windows Popular App
 on:
   workflow_dispatch:
     inputs:
@@ -47,7 +47,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        build: [linux, macos, windows]
+        build: [windows]
         include:
           - build: windows
             os: windows-latest
