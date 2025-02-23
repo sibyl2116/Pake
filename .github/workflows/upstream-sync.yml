@@ -20,16 +20,16 @@ jobs:
     - name: Checkout target repo
       uses: actions/checkout@v4
       with:
-        ref:  master
+        ref:  main
         persist-credentials: false
 
     - name: Sync upstream changes
       id: sync
       uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.1
       with:
-        target_sync_branch: master
+        target_sync_branch: main
         target_repo_token: ${{ secrets.UPSTREAM_SYNC_TOKEN }}
-        upstream_sync_branch: master
+        upstream_sync_branch: main
         upstream_sync_repo: tw93/Pake
         test_mode: ${{ inputs.sync_test_mode }}
       
