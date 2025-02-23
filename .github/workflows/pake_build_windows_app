@@ -1,4 +1,4 @@
-name: Build Windows Popular App
+name: Build Windows Single App
 on:
   workflow_dispatch:
     inputs:
